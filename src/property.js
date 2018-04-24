@@ -8,17 +8,17 @@ var Property = function(){
 };
 
 Property.prototype.addName = function (name) {
-  this._name = name
+  this._name = name;
 };
 
 Property.prototype.addDescription = function (description) {
-  this._description = description
+  this._description = description;
 };
 
 Property.prototype.addPrice = function (price) {
-  this._price = price
+  this._price = price;
 };
 
 Property.prototype.addavailableDate = function (date) {
-  this._availableDate.push(date)
+  this._availableDate.push(date);
 };
