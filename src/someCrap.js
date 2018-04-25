@@ -1,4 +1,4 @@
-
+/*jshint esversion: 6 */
 
 function Houses() {
   this._houseList = {};
