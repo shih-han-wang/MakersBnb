@@ -1,7 +1,10 @@
+
+
 function Houses() {
-  this.houseList = {};
+  this._houseList = {};
 }
 
-Houses.prototype.addHouse = function(name, description, price, dates) {
-  this.houseList[name] = {descrip: description, price: price, dates: dates };
+
+Houses.prototype.addHouse = function( {name = null, description = null, price = null, dates = []} = {}) {
+  this._houseList[name] = {descrip: description, price: price, dates: dates};
 };
