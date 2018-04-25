@@ -6,14 +6,14 @@ $(document).ready(function(){
       event.preventDefault();
 
       var name = $("#house-name").val();
-      var date1 = $("#dates").val();
+      var descrip = $("#descrip").val();
+      var date = $("#dates").val();
       var price = $("#price").val();
 
-      
+      AddProperty(name, descrip, price, dates);
 
 
-
-      $("#houses").append("<li>" + name + "  " + dates + "  " + price + "  " + "</li>");
+      $("#houses").append("<li>" + name + "  " + date + "  " + price + "  " + "</li>");
     });
 
 
