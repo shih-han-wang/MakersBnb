@@ -26,15 +26,15 @@ describe('Houses', function() {
 
   describe('addHouse', function() {
     it('adds keys and objects', function() {
-      myHouses.addHouse({name: "Mansion"});
+      myHouses.addHouse("Mansion");
       expect(myHouses._houseList.Mansion).toEqual({descrip: null, price: null, dates: []});
     });
   });
 
   describe('addHouse', function() {
-    it('adds keys and objects', function() {
-      myHouses.addHouse({name: "Mansion", descrip: "Uuuuge, very Uuuge"});
-      expect(myHouses._houseList.Mansion).toEqual({descrip: "Uuuuge, very Uuuge", price: null, dates: []});
+    it('can add description', function() {
+      myHouses.addHouse('Mansion', {description: "Uuuuge, very Uuuge"});
+      expect(myHouses._houseList.Mansion.descrip).toEqual("Uuuuge, very Uuuge");
     });
   });
 

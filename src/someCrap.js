@@ -5,6 +5,6 @@ function Houses() {
 }
 
 
-Houses.prototype.addHouse = function( {name = null, description = null, price = null, dates = []} = {}) {
+Houses.prototype.addHouse = function( name = null, {description = null, price = null, dates = []} = {}) {
   this._houseList[name] = {descrip: description, price: price, dates: dates};
 };
