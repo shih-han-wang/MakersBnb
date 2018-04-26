@@ -6,6 +6,11 @@
   </head>
   <body>
     <h1>Available Properties</h1>
+
+    <% @properties.each do |pro|%>
+      <li><a href="/property"><%= pro.property %></a></li>
+    <% end %>
+
     <form action='/addproperty' method='get'>
       <button type='submit' name='add'>Add Property</button>
     </form>
