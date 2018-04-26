@@ -1,4 +1,4 @@
-feature "home page content" do
+feature 'home page content' do
   scenario 'welcomne' do
     visit '/'
     expect(page).to have_content 'Welcome!'
@@ -18,5 +18,19 @@ feature 'button takes user to adding properties page' do
     visit '/properties'
     click_button 'Add Property'
     expect(page).to have_content 'Enter your property details here'
+  end
+end
+
+feature 'form to add properties' do
+  scenario 'submit button' do
+    visit '/addproperty'
+    expect(page).to have_button 'submit'
+  end
+end
+
+feature 'form to add properties' do
+  scenario 'see a text entry field' do
+    visit '/addproperty'
+    expect(page).to have_field 'property name'
   end
 end
