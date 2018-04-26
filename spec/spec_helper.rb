@@ -7,7 +7,8 @@ require 'capybara/rspec'
 require 'simplecov'
 require 'simplecov-console'
 require 'rake'
-// require_relative './features/web_helpers'
+# require_relative '../app.rb'
+# // require_relative './features/web_helpers'
 
 Capybara.app = Makersbnb
 Rake.application.load_rakefile
