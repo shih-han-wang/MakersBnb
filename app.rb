@@ -11,6 +11,10 @@ class Makersbnb < Sinatra::Base
     erb :properties
   end
 
+  get '/addproperty' do
+    erb :addproperty
+  end
+
 
   run! if app_file == $0
 end

@@ -12,3 +12,11 @@ feature 'button takes user to properties page' do
     expect(page).to have_content 'Available Properties'
   end
 end
+
+feature 'button takes user to adding properties page' do
+  scenario 'add property' do
+    visit '/properties'
+    click_button 'Add Property'
+    expect(page).to have_content 'Enter your property details here'
+  end
+end
