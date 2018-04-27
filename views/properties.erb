@@ -7,8 +7,13 @@
   <body>
     <h1>Available Properties</h1>
 
+
+
     <% @properties.each do |pro|%>
-      <li><a href="/property"><%= pro.property %></a></li>
+      <form action='/property/<%= pro.id %>' method='get'>
+        <input type="hidden" name='id' value="<%= pro.id %>">
+      <li><a href="/property/<%= pro.id %>" type='submit'><%= pro.property %></a></li>
+      </form>
     <% end %>
 
     <form action='/addproperty' method='get'>

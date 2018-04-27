@@ -36,13 +36,21 @@ feature 'form to add properties' do
 end
 
 feature 'add property and see the display' do
-  scenario '' do
-    visit 'addproperty'
+  scenario 'use form add property' do
+    visit '/addproperty'
     fill_in('username', :with => 'abc')
     fill_in('property', :with => 'Lovely Home')
     fill_in('description', :with => 'This is a very beautiful house')
     fill_in('price', :with => '55')
     click_button 'submit'
+    expect(page). to have_link 'Lovely Home'
+  end
+end
+
+feature 'see individual property' do
+  scenario 'click link' do
+    visit '/properties'
+    click_link 'Lovely Home'
     expect(page). to have_content 'Lovely Home'
   end
 end

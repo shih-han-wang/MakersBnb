@@ -26,7 +26,21 @@ class Property
         username: property['username'],
         property: property['property'],
         description: property['description'],
-        price: property['price'])
+        price: property['price']
+      )
+    end
+  end
+
+  def self.find(id)
+    con = Database::connect
+    con.exec("SELECT * FROM properties where id = '#{id}'").map do |property|
+      Property.new(
+        id: property['id'],
+        username: property['username'],
+        property: property['property'],
+        description: property['description'],
+        price: property['price']
+      )
     end
   end
 
